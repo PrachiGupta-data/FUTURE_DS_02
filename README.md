@@ -1,46 +1,66 @@
+# 📊 Customer Retention & Churn Analysis Dashboard
 
-# LOAD THE DATASET
+## 🚀 Project Overview
+This project is an interactive **Customer Churn Analysis Dashboard** built using Streamlit.
 
+It helps analyze customer behavior and identify key factors influencing churn in a telecom company.
 
-import streamlit as st
-import pandas as pd
+---
 
-# Page Configuration
-st.set_page_config(
-    page_title="Customer Retention & Churn Analysis",
-    page_icon="📊",
-    layout="wide"
-)
+## 🎯 Objective
+- Analyze customer churn patterns
+- Identify high-risk customer segments
+- Understand factors affecting retention
+- Provide data-driven business insights
 
-# Dashboard Title
-st.title("📊 Customer Retention & Churn Analysis Dashboard")
-st.write("This dashboard analyzes customer churn and retention patterns.")
+---
 
+## 📊 Dashboard Features
+- KPI Metrics (Churn Rate, Retention Rate, CLV)
+- Interactive Filters (Gender, Contract, Internet, Payment Method)
+- Visual Analysis using Plotly charts
+- Customer segmentation by tenure and behavior
+- Business insights and recommendations
+- Download filtered dataset feature
 
-# Load Dataset
-DATA_PATH = "Dataset/Telco-Customer-Churn.csv"
+---
 
-df = pd.read_csv(DATA_PATH)
+## 📂 Dataset
+- Telco Customer Churn Dataset
 
-# Display Dataset
-st.subheader("📋 Dataset Preview")
-st.dataframe(df.head())
+---
 
-# Dataset Shape
-st.subheader("📏 Dataset Shape")
+## 🛠 Tech Stack
+- Python
+- Streamlit
+- Pandas
+- Plotly
 
-rows, columns = df.shape
+---
 
-col1, col2 = st.columns(2)
+## 📈 Key Insights
+- Month-to-month customers have highest churn rate
+- Early tenure customers are at higher risk
+- High monthly charges increase churn probability
+- Electronic payment users show more churn
 
-with col1:
-    st.metric("Total Rows", rows)
+---
 
-with col2:
-    st.metric("Total Columns", columns)
+## 🚀 Business Recommendations
+- Promote long-term contracts
+- Improve onboarding experience
+- Offer discounts for high-charge customers
+- Encourage auto-payment methods
 
-# Column Names
-st.subheader("📝 Column Names")
+---
 
-st.write(df.columns.tolist())
+## 📸 Dashboard Preview
+(Add screenshot here after deployment)
 
+---
+
+## ▶️ How to Run Locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
