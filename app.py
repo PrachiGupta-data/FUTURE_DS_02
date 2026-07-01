@@ -22,9 +22,9 @@ st.info("This dashboard helps identify churn risk customers and improve retentio
 # LOAD DATASET
 # =====================================================
 
-DATA_PATH = "Dataset/Telco-Customer-Churn.csv"
 
-df = pd.read_csv(DATA_PATH)
+
+df = pd.read_csv("Telco-Customer-Churn.csv")
 
 
 # =====================================================
